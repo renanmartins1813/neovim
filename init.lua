@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -190,6 +190,13 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 -- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- personal keymaps
+
+-- plugbins
+
+-- undotree
+vim.keymap.set('n', '<leader>U', vim.cmd.UndotreeToggle)
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -231,6 +238,14 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'ThePrimeagen/vim-be-good',
+  'mbbill/undotree',
+
+  {
+    'folke/ts-comments.nvim',
+    opts = {},
+    event = 'VeryLazy',
+    enabled = vim.fn.has 'nvim-0.10.0' == 1,
+  },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -918,10 +933,10 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
