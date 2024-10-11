@@ -237,9 +237,28 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  --
+  --
+  -- custom plugins
   'ThePrimeagen/vim-be-good',
   'mbbill/undotree',
+  'mattn/emmet-vim',
+  {
+    'windwp/nvim-ts-autotag',
+    opts = {
+      -- Defaults
+      enable_close = true, -- Auto close tags
+      enable_rename = true, -- Auto rename pairs of tags
+      enable_close_on_slash = false, -- Auto close on trailing </
+    },
+  },
+  {
+    'rafamadriz/friendly-snippets',
+  },
 
+  -- custom plugins end
+  --
+  --
   {
     'folke/ts-comments.nvim',
     opts = {},
