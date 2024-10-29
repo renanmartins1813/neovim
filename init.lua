@@ -260,6 +260,9 @@ require('lazy').setup({
         css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
         -- Available modes: foreground, background
         mode = 'background', -- Set the display mode.
+        sass = { enable = true, parsers = { 'css' } },
+        scss = true,
+        -- scss = { enable = true, parsers = { 'css' } },
       })
     end,
     -- opts = {
