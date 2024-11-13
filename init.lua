@@ -245,7 +245,13 @@ require('lazy').setup({
   -- custom plugins
   'ThePrimeagen/vim-be-good',
   'mbbill/undotree',
-  'mattn/emmet-vim',
+  -- 'mattn/emmet-vim',
+  {
+    'olrtg/nvim-emmet',
+    config = function()
+      vim.keymap.set({ 'n', 'v' }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
+    end,
+  },
   {
     'norcalli/nvim-colorizer.lua',
     config = function()
@@ -830,6 +836,7 @@ require('lazy').setup({
         'css_variables',
         'cssls',
         'html',
+        'emmet_language_server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
