@@ -370,13 +370,13 @@ require('lazy').setup({
         '<leader>csh',
         '<cmd>CodeSnapSaveHighlight<cr>',
         mode = 'x',
-        desc = 'Save selected code snapshot in ~/Pictures',
+        desc = 'Save selected code highlighted snapshot in ~/Pictures/Codes/',
       },
       {
         '<leader>csa',
         '<cmd>CodeSnapSaveASCII<cr>',
         mode = 'x',
-        desc = 'Save selected code snapshot in ~/Pictures',
+        desc = 'Save selected code ASCII snapshot in ~/Pictures/Codes/',
       },
     },
     opts = {
