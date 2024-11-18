@@ -93,6 +93,11 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Set swift width = 4    |    default it 2
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+-- vim.o.tabstop
+
 -- Enale termguicolors
 vim.opt.termguicolors = true
 
