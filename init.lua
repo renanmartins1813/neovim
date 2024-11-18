@@ -96,6 +96,7 @@ vim.g.have_nerd_font = true
 -- Set swift width = 4    |    default it 2
 vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
+vim.o.expandtab = false
 -- vim.o.tabstop
 
 -- Enale termguicolors
