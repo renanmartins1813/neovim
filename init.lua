@@ -941,6 +941,13 @@ require('lazy').setup({
             end,
           },
         },
+        config = function()
+          -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
+          --require("luasnip.loaders.from_vscode").lazy_load()
+          --require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
+          require('luasnip').filetype_extend('php', { 'html' })
+          require('luasnip').filetype_extend('php', { 'css' })
+        end,
       },
       'saadparwaiz1/cmp_luasnip',
 
