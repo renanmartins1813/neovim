@@ -852,6 +852,7 @@ require('lazy').setup({
         'phpcbf',
         'phpactor',
         'phpcs',
+        'phpstan',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
