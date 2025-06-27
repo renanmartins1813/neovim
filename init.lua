@@ -851,6 +851,7 @@ require('lazy').setup({
         'php-debug-adapter',
         'phpcbf',
         'phpactor',
+        'intelephense',
         'phpcs',
         'phpstan',
       })
