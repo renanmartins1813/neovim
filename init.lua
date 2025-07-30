@@ -854,6 +854,13 @@ require('lazy').setup({
         'intelephense',
         'phpcs',
         'phpstan',
+        'selene',
+        'shellcheck',
+        'shfmt',
+        'tailwindcss-language-server',
+        'eslint-lsp',
+        'json-lsp',
+        'luacheck',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -971,7 +978,10 @@ require('lazy').setup({
             luasnip.lsp_expand(args.body)
           end,
         },
-        completion = { completeopt = 'menu,menuone,noinsert' },
+        completion = {
+          completeopt = 'menu,menuone,noinsert',
+          accept = { auto_brackets = { enabled = false } },
+        },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
@@ -1132,6 +1142,16 @@ require('lazy').setup({
         'java',
         'c_sharp',
         'php',
+        'astro',
+        'cmake',
+        'cpp',
+        'fish',
+        'gitignore',
+        'graphql',
+        'http',
+        'rust',
+        'sql',
+        'svelte',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
@@ -1161,10 +1181,10 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
-  require 'kickstart.plugins.autopairs',
+  -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
