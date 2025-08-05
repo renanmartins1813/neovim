@@ -206,7 +206,9 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- undotree
 vim.keymap.set('n', '<leader>U', vim.cmd.UndotreeToggle, { desc = '[U] Toggle Undotree' })
 
--- [[ Basic Autocommands ]]
+-- -- Oil.nvim
+vim.keymap.set('n', '-', '<cmd>Oil --float<CR>', { desc = 'Open parent directory in Oil' }) -- [[ Basic Autocommands ]]
+
 --  See `:help lua-guide-autocommands`
 
 -- Highlight when yanking (copying) text
@@ -842,7 +844,7 @@ require('lazy').setup({
         'goimports-reviser',
         'gopls',
         'somesass_ls',
-        'ts_ls',
+        -- 'ts_ls',
         'ts-standard',
         'css_variables',
         'cssls',
@@ -1184,7 +1186,7 @@ require('lazy').setup({
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
@@ -1193,7 +1195,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
